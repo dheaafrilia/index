@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Dhea Afrilia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-pink-50 text-pink-950 font-sans antialiased">
+  <!-- NAVBAR & HERO (BAGIAN 1) -->
+  <header class="sticky top-0 z-40 bg-pink-100/90 backdrop-blur border-b border-pink-200">
+    <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-pink-600 tracking-wide">Dhea.id</a>
+      <button id="menu-btn" onclick="toggleMenu()" class="md:hidden text-pink-700 text-2xl focus:outline-none"><i class="fas fa-bars"></i></button>
+      <div id="nav-links" class="hidden md:flex gap-6 font-medium text-pink-800">
+        <a href="#profil" class="hover:text-pink-600 transition">Profil</a>
+        <a href="#proyek" class="hover:text-pink-600 transition">Proyek</a>
+        <a href="#kontak" class="hover:text-pink-600 transition">Kontak</a>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-pink-100 px-4 py-3 flex flex-col gap-3 border-t border-pink-200 font-medium">
+      <a href="#profil" onclick="toggleMenu()" class="hover:text-pink-600">Profil</a>
+      <a href="#proyek" onclick="toggleMenu()" class="hover:text-pink-600">Proyek</a>
+      <a href="#kontak" onclick="toggleMenu()" class="hover:text-pink-600">Kontak</a>
+    </div>
+  </header>
+  <!-- HERO SECTION -->
+  <section class="max-w-6xl mx-auto px-4 py-16 text-center">
+    <div class="inline-block p-1 bg-white rounded-full shadow-md mb-4 border border-pink-300">
+        <img src="aset/dhea.jpeg" alt="Dhea Afrilia" class="w-24 h-24 rounded-full object-cover">
+    </div>
+    <h1 class="text-3xl md:text-5xl font-extrabold text-pink-700 mb-3">Halo, Saya Dhea Afrilia ✨</h1>
+    <p class="text-pink-800 max-w-xl mx-auto mb-6 text-sm md:text-base">Mahasiswi Informatika Universitas Sulawesi Barat yang berfokus pada Web Programming, Database, dan Graphic Design bertema soft aesthetic.</p>
+    <div class="flex justify-center gap-4">
+      <a href="#proyek" class="bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-2.5 rounded-full shadow-lg transition">Lihat Karya</a>
+      <button onclick="openModal('Sertifikat Web Programming', 'Sertifikat kompetensi pemrograman web dasar dan database MariaDB dari Universitas Sulawesi Barat.')" class="border border-pink-400 text-pink-700 hover:bg-pink-100 font-semibold px-6 py-2.5 rounded-full transition">Sertifikat</button>
+    </div>
+  </section>
+  <!-- SECTION PROFIL DIRI -->
+  <section id="profil" class="max-w-6xl mx-auto px-4 py-12">
+    <div class="bg-white/80 border border-pink-200 rounded-2xl p-6 md:p-8 shadow-sm">
+      <h2 class="text-2xl font-bold text-pink-700 mb-4 border-b border-pink-200 pb-2"><i class="fas fa-user-circle mr-2"></i>Tentang Saya</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm md:text-base">
+        <div>
+          <p class="mb-2"><strong>Nama:</strong> Dhea Afrilia</p>
+          <p class="mb-2"><strong>NIM:</strong> D0225340 (Kelas 2025D)</p>
+          <p class="mb-2"><strong>Instansi:</strong> Universitas Sulawesi Barat</p>
+          <p><strong>Minat:</strong> Web Development, UI/UX Design & Canva Graphic Design</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-pink-600 mb-2">Keahlian Utamanya:</h3>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full border border-pink-300">HTML5 & PHP</span>
+            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full border border-pink-300">MariaDB / SQL</span>
+            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full border border-pink-300">Java Data Structures</span>
+            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full border border-pink-300">Canva Design</span>
+            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-full border border-pink-300">Tailwind CSS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- GRID KARTU PROYEK (BAGIAN 2: 1 HP, 2 Tablet, 3 Laptop) -->
+  <section id="proyek" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-2xl md:text-3xl font-bold text-center text-pink-700 mb-8">Portofolio Proyek</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl border border-pink-200 p-5 shadow-sm hover:shadow-md transition">
+        <div class="h-36 bg-pink-100 rounded-lg flex items-center justify-center text-pink-400 mb-4 text-4xl"><i class="fas fa-laptop-code"></i></div>
+        <h3 class="font-bold text-lg text-pink-800">Sistem Profil Mahasiswa</h3>
+        <p class="text-xs text-pink-600 mt-1 mb-3">Pengolahan data form & beban sks berbasis PHP & HTML5.</p>
+        <button onclick="openModal('Sistem Profil Mahasiswa', 'Proyek web form dinamis untuk perhitungan beban studi dan validasi input profil.')" class="w-full bg-pink-100 hover:bg-pink-200 text-pink-700 text-xs font-semibold py-2 rounded-lg transition">Detail Proyek</button>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-white rounded-xl border border-pink-200 p-5 shadow-sm hover:shadow-md transition">
+        <div class="h-36 bg-pink-100 rounded-lg flex items-center justify-center text-pink-400 mb-4 text-4xl"><i class="fas fa-tshirt"></i></div>
+        <h3 class="font-bold text-lg text-pink-800">Desain Kaos "HOPE" Canva</h3>
+        <p class="text-xs text-pink-600 mt-1 mb-3">Mockup pakaian promo & pamphlet visual estetik pink.</p>
+        <button onclick="openModal('Desain Kaos HOPE', 'Koleksi desain grafis apparel pemuda dengan layout simetris dan warna pastel di Canva.')" class="w-full bg-pink-100 hover:bg-pink-200 text-pink-700 text-xs font-semibold py-2 rounded-lg transition">Detail Proyek</button>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-white rounded-xl border border-pink-200 p-5 shadow-sm hover:shadow-md transition">
+        <div class="h-36 bg-pink-100 rounded-lg flex items-center justify-center text-pink-400 mb-4 text-4xl"><i class="fas fa-database"></i></div>
+        <h3 class="font-bold text-lg text-pink-800">Skema MariaDB & SQL</h3>
+        <p class="text-xs text-pink-600 mt-1 mb-3">Query relasional data, filtering range, dan update bersyarat.</p>
+        <button onclick="openModal('Skema MariaDB & SQL', 'Rancangan skema basis data relasional lengkap dengan diagram ERD dan optimasi query.')" class="w-full bg-pink-100 hover:bg-pink-200 text-pink-700 text-xs font-semibold py-2 rounded-lg transition">Detail Proyek</button>
+      </div>
+    </div>
+  </section>
+  <!-- FORM KONTAK VALID (BAGIAN 3) -->
+  <section id="kontak" class="max-w-xl mx-auto px-4 py-12">
+    <div class="bg-white border border-pink-200 rounded-2xl p-6 md:p-8 shadow-sm">
+      <h2 class="text-2xl font-bold text-center text-pink-700 mb-6">Hubungi Saya</h2>
+      <div id="alert" class="hidden p-3 mb-4 text-xs rounded-lg text-center"></div>
+      <form id="contactForm" onsubmit="validateForm(event)" novalidate class="space-y-4">
+        <div>
+          <label class="block text-xs font-medium text-pink-700 mb-1">Nama Lengkap</label>
+          <input type="text" id="nama" class="w-full px-3 py-2 border border-pink-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-pink-400" placeholder="Masukkan nama...">
+          <p id="errNama" class="text-red-500 text-xs mt-1 hidden">Nama minimal 3 karakter.</p>
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-pink-700 mb-1">Email</label>
+          <input type="email" id="email" class="w-full px-3 py-2 border border-pink-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-pink-400" placeholder="nama@email.com">
+          <p id="errEmail" class="text-red-500 text-xs mt-1 hidden">Format email tidak valid.</p>
+        </div>
+        <div>
+          <label class="block text-xs font-medium text-pink-700 mb-1">Pesan</label>
+          <textarea id="pesan" rows="3" class="w-full px-3 py-2 border border-pink-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-pink-400" placeholder="Tuliskan pesan..."></textarea>
+          <p id="errPesan" class="text-red-500 text-xs mt-1 hidden">Pesan minimal 10 karakter.</p>
+        </div>
+        <button type="submit" class="w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2.5 rounded-lg text-sm shadow transition">Kirim Pesan</button>
+      </form>
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <footer class="bg-pink-100 border-t border-pink-200 py-6 text-center text-xs text-pink-700">
+    <p>© 2026 Dhea Afrilia | Tugas Praktikum Web Programming Unsulbar</p>
+  </footer>
+  <!-- INTERAKTIVITAS MODAL (BAGIAN 4) -->
+  <div id="modal" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden z-50 flex items-center justify-center p-4" onclick="closeModalOnBackdrop(event)">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl relative animate-fade">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-pink-600 text-lg"><i class="fas fa-times"></i></button>
+      <h3 id="modalTitle" class="text-xl font-bold text-pink-700 mb-2"></h3>
+      <p id="modalDesc" class="text-sm text-pink-900 mb-6 leading-relaxed"></p>
+      <button onclick="closeModal()" class="w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 rounded-lg text-sm transition">Tutup Dialog</button>
+    </div>
+  </div>
+  <!-- JAVASCRIPT RINGKAS (< 30 BARIS) -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+    function openModal(title, desc) {
+      document.getElementById('modalTitle').innerText = title;
+      document.getElementById('modalDesc').innerText = desc;
+      document.getElementById('modal').classList.remove('hidden');
+    }
+    function closeModal() {
+      document.getElementById('modal').classList.add('hidden');
+    }
+    function closeModalOnBackdrop(e) {
+      if (e.target.id === 'modal') closeModal();
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+    function validateForm(e) {
+      e.preventDefault();
+      const nama = document.getElementById('nama').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const pesan = document.getElementById('pesan').value.trim();
+      const alertBox = document.getElementById('alert');
+      const isNamaValid = nama.length >= 3;
+      const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      const isPesanValid = pesan.length >= 10;
+      document.getElementById('errNama').classList.toggle('hidden', isNamaValid);
+      document.getElementById('errEmail').classList.toggle('hidden', isEmailValid);
+      document.getElementById('errPesan').classList.toggle('hidden', isPesanValid);
+      if (isNamaValid && isEmailValid && isPesanValid) {
+        alertBox.className = "p-3 mb-4 text-xs rounded-lg text-center bg-green-100 text-green-700 border border-green-300";
+        alertBox.innerText = "✨ Pesan berhasil dikirim! Terima kasih.";
+        alertBox.classList.remove('hidden');
+        document.getElementById('contactForm').reset();
+      } else {
+        alertBox.className = "p-3 mb-4 text-xs rounded-lg text-center bg-red-100 text-red-700 border border-red-300";
+        alertBox.innerText = "⚠️ Harap periksa kembali isian formulir Anda.";
+        alertBox.classList.remove('hidden');
+      }
+    }
+  </script>
+</body>
+</html>
